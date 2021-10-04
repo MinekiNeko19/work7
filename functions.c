@@ -10,12 +10,12 @@ void populate(int arr[], int arrSize); // helper
 int main() {
     int a[10];
     populate(a, sizeof(a)/sizeof(int));
-    int b[15];
-    populate(b, sizeof(b)/sizeof(int));
-    int c[20];
-    populate(c, sizeof(c)/sizeof(int));
-    int d[10];
-    populate(d, sizeof(d)/sizeof(int));
+    // int b[15];
+    // populate(b, sizeof(b)/sizeof(int));
+    // int c[20];
+    // populate(c, sizeof(c)/sizeof(int));
+    // int d[10];
+    // populate(d, sizeof(d)/sizeof(int));
     int e[10];
     int i;
     for (i = 0; i<10; i++) {
@@ -35,11 +35,18 @@ int main() {
     // testing avgArr
     printf("array e: \n");
     printArr(e, sizeof(e)/sizeof(int));
-    printf("avg of e: %lf\n\n", avgArr(e, sizeof(e)/sizeof(int)));
+    // printf("avg of e: %lf\n\n", avgArr(e, sizeof(e)/sizeof(int)));
     
     printf("array a: \n");
     printArr(a, sizeof(a)/sizeof(int));
-    printf("avg of a: %lf\n", avgArr(a, sizeof(a)/sizeof(int)));
+    // printf("avg of a: %lf\n", avgArr(a, sizeof(a)/sizeof(int)));
+
+    // testing copyArr
+    copyArr(e,a,sizeof(a)/sizeof(int));
+    printf("array e: \n");
+    printArr(e, sizeof(e)/sizeof(int));
+    printf("array a: \n");
+    printArr(a, sizeof(a)/sizeof(int));
 
     return 0;
 }
@@ -62,6 +69,15 @@ double avgArr(int arr[], int arrSize) {
         total += arr[i];
     }
     return (double)total/(double)arrSize;
+}
+
+void copyArr(int o[], int n[], int arrSize) {
+    int i;
+    for (i = 0; i < arrSize; i++) {
+        *n = *o;
+        n++;
+        o++;
+    }
 }
 
 void populate(int arr[], int arrSize) { // helper
