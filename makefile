@@ -1,2 +1,5 @@
-all: functions.o
+all:
 	gcc functions.c
+
+run:
+	./a.out
