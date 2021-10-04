@@ -88,7 +88,6 @@ void populate(int arr[], int arrSize) { // helper
     // srand(time(NULL));
 
     for (i = 0; i < arrSize; i++) {
-        int x = rand();
-        arr[i] = x;
+        arr[i] = rand();
     }
 }
