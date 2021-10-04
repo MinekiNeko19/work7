@@ -10,11 +10,11 @@ void populate(int arr[], int arrSize); // helper
 int main() {
     int a[10];
     populate(a, sizeof(a)/sizeof(int));
-    // int b[15];
+    int b[15];
     // populate(b, sizeof(b)/sizeof(int));
-    // int c[20];
+    int c[20];
     // populate(c, sizeof(c)/sizeof(int));
-    // int d[10];
+    int d[10];
     // populate(d, sizeof(d)/sizeof(int));
     int e[10];
     int i;
@@ -23,25 +23,28 @@ int main() {
     }
 
     // testing printArr
-    // printf("array a:\n");
-    // printArr(a, sizeof(a)/sizeof(int));
-    // printf("array b:\n");
-    // printArr(b, sizeof(b)/sizeof(int));
-    // printf("array c:\n");
-    // printArr(c, sizeof(c)/sizeof(int));
-    // printf("array d:\n");
-    // printArr(d, sizeof(d)/sizeof(int));
+    printf("testing printArr\n\n");
+    printf("array a:\n");
+    printArr(a, sizeof(a)/sizeof(int));
+    printf("array b:\n");
+    printArr(b, sizeof(b)/sizeof(int));
+    printf("array c:\n");
+    printArr(c, sizeof(c)/sizeof(int));
+    printf("array d:\n");
+    printArr(d, sizeof(d)/sizeof(int));
 
     // testing avgArr
+    printf("\ntesting avgArr\n\n");
     printf("array e: \n");
     printArr(e, sizeof(e)/sizeof(int));
-    // printf("avg of e: %lf\n\n", avgArr(e, sizeof(e)/sizeof(int)));
+    printf("avg of e: %lf\n\n", avgArr(e, sizeof(e)/sizeof(int)));
     
     printf("array a: \n");
     printArr(a, sizeof(a)/sizeof(int));
-    // printf("avg of a: %lf\n", avgArr(a, sizeof(a)/sizeof(int)));
+    printf("avg of a: %lf\n\n", avgArr(a, sizeof(a)/sizeof(int)));
 
     // testing copyArr
+    printf("testing copyArr\n\n");
     copyArr(e,a,sizeof(a)/sizeof(int));
     printf("array e: \n");
     printArr(e, sizeof(e)/sizeof(int));
